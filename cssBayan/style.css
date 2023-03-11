@@ -68,6 +68,7 @@ body {
 .meme_icon_block {
   /* display: block; */
   display: none;
+  color: #0e1f2b;
   position: absolute;
   top: 1.4rem;
   right: 1rem;
@@ -125,4 +126,14 @@ body {
 .meme_item:hover .meme_show {
   width: 100%;
   padding-top: 1rem;
+}
+
+.meme_input:active ~ .meme_title {
+  color: #4194c7;
+}
+
+.meme_input:active ~ .meme_icon_block {
+  /* stroke: #4194c7; */
+  /* fill: #4194c7; */
+  color: #4194c7;
 }
