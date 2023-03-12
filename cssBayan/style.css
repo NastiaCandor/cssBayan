@@ -16,13 +16,11 @@ body {
 
 .wrapper {
   display: block;
-  margin: 0 1rem;
+  margin: 0 auto;
 }
 
 .meme_section {
   padding: 1rem;
-  display: block;
-  margin: 0 auto;
   max-width: 90rem;
 }
 
@@ -54,7 +52,6 @@ body {
   padding: 1rem;
   margin: 0.5rem 0;
 }
-
 
 .meme_name {  /* label class name */
   display: grid;
@@ -117,7 +114,6 @@ body {
   padding-top: 1rem;
 }
 
-/* maybe */
 .meme_input:active ~ .meme_hat {
   color: #4194c7;
 }
@@ -130,6 +126,7 @@ body {
   color: #4194c7;
 }
 
+/* Hover effect support for devices that support that */
 @media (hover: hover) {
   .meme_item:hover .meme_show {
     width: 100%;
