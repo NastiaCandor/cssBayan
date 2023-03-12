@@ -130,7 +130,7 @@ body {
   color: #4194c7;
 }
 
-@media (min-width: 1920px) {
+@media (hover: hover) {
   .meme_item:hover .meme_show {
     width: 100%;
     padding-top: 1rem;
