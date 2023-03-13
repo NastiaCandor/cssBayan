@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background: rgb(180,223,208);
+  font-family: "Roboto", Verdana, sans-serif;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+.meme_section {
+  padding: 1rem;
+  max-width: 90rem;
+}
+
+.main_title {
+  color: #394c59;
+  font-size: 2rem;
+}
+
+.main_title span {
+  color: #ca7b7b;
+  font: caption;
+}
+
+/* MEME BLOCK */
+
+.meme_list {
+  padding: 0.5rem 0 0.5rem 0;
+  color: #0e1f2b;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  /* to remove blue highlight while touching */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.meme_item {
+  background: linear-gradient(145deg, rgba(255,255,255,0.1825980392156863) 0%, rgba(255,255,255,0.12377450980392157) 100%);
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.meme_name {  /* label class name */
+  display: grid;
+  grid-template-columns: 100fr 1fr;
+  grid-template-areas:
+      'a b'
+      'c c';
+  /* font-size: 1.3rem; */
+  cursor: pointer;
+  max-width: calc(100% - 1.3rem);
+}
+
+.meme_input, .meme_title {
+  grid-area: a;
+}
+
+.meme_icon_block {
+  display: block;
+  grid-area: b;
+  color: currentColor;
+  transform: rotate(45deg);
+  transition: transform ease-in-out 0.3s;
+}
+
+.meme_list:hover .meme_icon_block {
+  display: block;
+}
+
+.meme_input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.meme_show {
+  width: 0;
+  grid-area: c;
+  transition: all ease-in-out 0.3s;
+}
+
+.meme_image {
+  max-width: calc(90% - 1rem);
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.meme_input:checked ~ .meme_icon_block {
+  transform: rotate(90deg);
+  color: #0e1f2b;
+}
+
+.meme_input:checked + .meme_title {
+  color: #0e1f2b;
+}
+
+.meme_input:checked ~ .meme_show {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.meme_input:active ~ .meme_hat {
+  color: #4194c7;
+}
+
+.meme_input:active ~ .meme_title {
+  color: #4194c7;
+}
+
+.meme_input:active ~ .meme_icon_block {
+  color: #4194c7;
+}
+
+/* Hover effect support for devices that support that */
+@media (hover: hover) {
+  .meme_item:hover .meme_show {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  .meme_list {
+    color: #4194c7;
+  }
+  .meme_list:hover {
+    color: #0e1f2b;
+  }
+  .meme_input:hover ~ .meme_icon_block {
+    transform: rotate(90deg);
+  }
+  .meme_image {
+    max-height: 50vh;
+  }
+  .meme_icon_block {
+    display: none;
+  }
+}
+
+@media (min-width: 820px) {
+  .meme_name {
+    font-size: 1.2rem;
+  }
+  .main_title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .meme_name {
+    font-size: 2rem;
+  }
+  .main_title {
+    font-size: 3rem;
+  }
+}
