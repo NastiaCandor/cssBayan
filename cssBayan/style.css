@@ -59,7 +59,7 @@ body {
   grid-template-areas:
       'a b'
       'c c';
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   cursor: pointer;
   max-width: calc(100% - 1.3rem);
 }
@@ -146,5 +146,23 @@ body {
   }
   .meme_icon_block {
     display: none;
+  }
+}
+
+@media (min-width: 820px) {
+  .meme_name {
+    font-size: 1.2rem;
+  }
+  .main_title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .meme_name {
+    font-size: 2rem;
+  }
+  .main_title {
+    font-size: 3rem;
   }
 }
